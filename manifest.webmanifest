@@ -1,0 +1,26 @@
+{
+  "name": "Treasure Dig",
+  "short_name": "Treasure Dig",
+  "description": "Tap sand tiles to dig up shells, stars, and more. Soft beach treasure hunt for ages 4–6 — no bombs, no fail screens.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0d3a52",
+  "theme_color": "#0d3a52",
+  "categories": ["games", "kids", "entertainment"],
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
