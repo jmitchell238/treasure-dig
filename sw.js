@@ -1,5 +1,5 @@
 // Treasure Dig — bump with GAME_VERSION in js/config.js
-const CACHE = 'treasure-dig-1.0.000';
+const CACHE = 'treasure-dig-1.0.001';
 
 const ASSETS = [
   './',
@@ -51,7 +51,7 @@ function sameOrigin(url) {
 }
 
 function networkFirst(request) {
-  return fetch(request).then(res => {
+  return fetch(request, { cache: 'no-store' }).then(res => {
     if (res.ok && sameOrigin(request.url)) {
       const copy = res.clone();
       caches.open(CACHE).then(c => c.put(request, copy));
