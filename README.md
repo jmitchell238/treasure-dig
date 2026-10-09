@@ -1,53 +1,52 @@
 # Treasure Dig
 
-Tap sand tiles to dig up shells, stars, and beach treasures. Soft minesweeper energy **without bombs**. Built for ages **4–6**.
+Tap sand to dig up shells, stars and other beach treasures. It plays a bit like Minesweeper, but there are no bombs. Made for ages 4–6.
 
-**Play:** https://jmitchell238.github.io/treasure-dig/
-
-Part of [Arcade Hub](https://jmitchell238.github.io/arcade-hub/).
-
----
+Play at https://jmitchell238.github.io/treasure-dig/. It's one of the games in [Arcade Hub](https://jmitchell238.github.io/arcade-hub/).
 
 ## Modes
 
 | Mode | Grid | Treasures | Boards |
 |------|------|-----------|--------|
-| **Free Dig** | 4×4 | 4 | Endless |
-| **Beach Day** | 4×5 | 5 | 4 |
-| **Deep Dig** | 5×5 | 7 | 6 |
-| **Treasure Pro** | 5×6 | 9 | 8 |
+| Free Dig | 4×4 | 4 | Endless |
+| Beach Day | 4×5 | 5 | 4 |
+| Deep Dig | 5×5 | 7 | 6 |
+| Treasure Pro | 5×6 | 9 | 8 |
 
 ## Features
 
-- Beach sandbox grid — dig sand piles
-- Treasures: shell, star, crab, coin, pearl, anchor, fish, gem
-- Empty tiles say “Almost!” — never punish
-- Soft sparkle trail after ~7s idle
-- Sound mute + reduced motion
-- Progress in `localStorage`
+- Treasures: shell, star, crab, coin, pearl, anchor, fish and gem
+- Empty spots just say "Almost!"
+- A sparkle trail toward a treasure after about 7 seconds without a find
+- Mute and Calm motion settings
+- Progress saved in localStorage
 - Installable PWA
 
-## Stack
+## For parents
 
-Static HTML / CSS / Canvas. No build step.
+- No lives, ads, accounts, fail screens or bombs. A wrong dig just turns up sand.
+- Calm motion tones the animation down.
 
-## Versioning
-
-- `GAME_VERSION` in `js/config.js`
-- Keep `CACHE` in `sw.js` in sync: `'treasure-dig-' + GAME_VERSION`
-
-## Local preview
+## Running locally
 
 ```bash
 python3 -m http.server 8080
 ```
 
-## Parents
+Then open http://localhost:8080. The service worker needs `localhost` or HTTPS.
 
-- No lives, ads, accounts, fail screens, or bombs
-- Wrong digs are soft sand only
-- **Calm motion** for sensitive kids
+Plain HTML, CSS and canvas with no build step.
+
+## Tests
+
+```bash
+node tests/run.mjs
+```
+
+## Versioning
+
+When you bump `GAME_VERSION` in `js/config.js`, set `CACHE` in `sw.js` to `'treasure-dig-' + GAME_VERSION`.
 
 ## License
 
-Personal project for family Arcade Hub.
+Personal project for the family.
