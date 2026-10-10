@@ -1,5 +1,5 @@
 // Treasure Dig — bump with GAME_VERSION in js/config.js
-const CACHE = 'treasure-dig-1.0.001';
+const CACHE = 'treasure-dig-1.0.002';
 
 const ASSETS = [
   './',
